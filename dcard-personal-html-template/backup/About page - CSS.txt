@@ -1,0 +1,116 @@
+/* End wrapper for navigation section*/
+/* Stlye wrapper for about content section*/
+#about .identity-area label {
+  position: relative;
+  display: block;
+}
+#about .identity-area label:after {
+  content: ":";
+  position: absolute;
+  right: 0;
+  width: 5px;
+  top: 0;
+}
+#about .box-fact {
+  position: relative;
+  padding-left: 40px;
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+#about .box-fact .icn-fixed {
+  position: absolute;
+  left: 0px;
+  font-size: 30px;
+  top: 10px;
+  color: #e1e1e1;
+}
+@media (max-width: 800px) {
+  #about .box-fact {
+    font-size: 18px;
+  }
+}
+#about .box-testimonial {
+  position: relative;
+  padding-right: 100px;
+  min-height: 150px;
+}
+#about .box-testimonial .date-post {
+  font-style: italic;
+}
+#about .box-testimonial img {
+  width: 80px;
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+#about .box-testimonial .oComment {
+  background: #249EBD;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  min-height: 100px;
+  position: relative;
+  margin-bottom: 10px;
+}
+#about .box-testimonial .oComment:after {
+  content: "";
+  position: absolute;
+  border-left: 10px solid #249EBD;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  top: 40px;
+  right: -10px;
+}
+#about .box-testimonial .oComment h5 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+#about .control-testi-slider {
+  position: absolute;
+  right: 14px;
+  bottom: 0;
+}
+#about .control-testi-slider a {
+  display: inline-block;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  width: 26px;
+  color: #249EBD;
+  text-align: center;
+  background: white;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+#about .control-testi-slider a:hover {
+  background: #249EBD;
+  color: white;
+  border: 1px solid transparent;
+}
+#about .list-clients li {
+  float: left;
+  padding: 10px;
+  width: 50%;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+#about .list-clients li a {
+  display: block;
+}
+#about .list-clients li a img {
+  width: 95px;
+  opacity: 0.5;
+  transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease 0s;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -ms-transition: all 0.3s ease 0s;
+}
+#about .list-clients li a img:hover {
+  opacity: 1;
+}

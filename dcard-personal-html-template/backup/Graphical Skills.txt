@@ -1,0 +1,30 @@
+                        <div class="deviter"></div>
+                        <h3 class="title with-icon"><span class="fa fa-pencil icn-title"></span> Graphic Skills</h3>
+                        <div class="box-block">
+
+                          <!-- =========
+                          STart your Skills Progress point bars section
+                          ===================================-->
+                          <ul class="list-unstyled list-points-progress">
+                            <li>
+                              <span class="caption-skill">PhotoShop</span>
+                              <div class="pogress-point">
+                                <span class="point-indicator">90%</span>
+                                <div class="progress-bar-point" style="width: 90%;"></div>
+                              </div>
+                            </li>
+                            <li>
+                              <span class="caption-skill">CorelDraw</span>
+                              <div class="pogress-point">
+                                <span class="point-indicator">70%</span>
+                                <div class="progress-bar-point" style="width: 70%;"></div>
+                              </div>
+                            </li>
+                            <li>
+                              <span class="caption-skill">3D Max</span>
+                              <div class="pogress-point">
+                                <span class="point-indicator">80%</span>
+                                <div class="progress-bar-point" style="width: 80%;"></div>
+                              </div>
+                            </li>
+                          </ul>
