@@ -214,13 +214,15 @@ $(function () {
 
 
     function resizeIframe() {
-      var doc = document.getElementById("portfolio-iframe").contentWindow.document;
-      console.log(doc.body.scrollHeight + 'px');
+      var obj = document.getElementById("portfolio-iframe");
+      var doc = obj.contentWindow.document;
+      
      /* $("#portfolio-iframe").style.height = $("#portfolio-iframe").contentWindow.document.body.scrollHeight + 'px';*/
-      /*obj.style.height = Math.max(
-        Math.max(obj.contentWindow.document.body.scrollHeight, obj.contentWindow.document.documentElement.scrollHeight),
-        Math.max(obj.contentWindow.document.body.offsetHeight, obj.contentWindow.document.documentElement.offsetHeight),
-        Math.max(obj.contentWindow.document.body.clientHeight, obj.contentWindow.document.documentElement.clientHeight)) + 'px';*/
+      obj.style.height = Math.max(
+        Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight),
+        Math.max(doc.body.offsetHeight, doc.documentElement.offsetHeight),
+        Math.max(doc.body.clientHeight, doc.documentElement.clientHeight)) + 'px';
+      console.log(doc.body.scrollHeight + 'px');
     }
 
     $(window).resize(function () {
