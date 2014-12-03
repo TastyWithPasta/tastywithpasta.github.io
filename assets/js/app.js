@@ -191,48 +191,34 @@ function init_gmap() {
   }, 2000);
 }
 
+function resizeIframe() {
+  var obj = document.getElementById("portfolio-iframe");
+  var doc = obj.contentWindow.document;
+      
+  obj.style.height = Math.max(
+  Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight),
+  Math.max(doc.body.offsetHeight, doc.documentElement.offsetHeight),
+  Math.max(doc.body.clientHeight, doc.documentElement.clientHeight)) + 'px';
+  console.log(doc.body.scrollHeight + 'px');
+}
+
 $(window).load(function() {
   $('.imgWrapper img').animate({opacity: '1.0'}, 1000, function() {
     $(this).css('filter', 'none');
   });
+  resizeIframe();
 });
 
 
-function getDocHeight(D) {
-    return Math.max(
-        Math.max(D.body.scrollHeight, D.documentElement.scrollHeight),
-        Math.max(D.body.offsetHeight, D.documentElement.offsetHeight),
-        Math.max(D.body.clientHeight, D.documentElement.clientHeight)
-    );
-}
-
 $(function () {
 
-    //setup these vars only once since they are static
-    var $myIFRAME   = $("#iframe"),//unless this collection of elements changes over time, you only need to select them once
-        resizeTimer = null;
-
-
-    function resizeIframe() {
-      var obj = document.getElementById("portfolio-iframe");
-      var doc = obj.contentWindow.document;
-      
-     /* $("#portfolio-iframe").style.height = $("#portfolio-iframe").contentWindow.document.body.scrollHeight + 'px';*/
-      obj.style.height = Math.max(
-        Math.max(doc.body.scrollHeight, doc.documentElement.scrollHeight),
-        Math.max(doc.body.offsetHeight, doc.documentElement.offsetHeight),
-        Math.max(doc.body.clientHeight, doc.documentElement.clientHeight)) + 'px';
-      console.log(doc.body.scrollHeight + 'px');
-    }
-
+    var resizeTimer = null;
     $(window).resize(function () {
-        //only run this once per resize event, if a user drags the window to a different size, this will wait until they finish, then run the resize function
-        //this way you don't blow up someone's browser with your resize function running hundreds of times a second
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function () {
             resizeIframe();
         }, 75);
-    }).trigger("click");//run this once initially, just a different way to initialize
+    }).trigger("click");
 });
 
 
