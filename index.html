@@ -26,12 +26,32 @@
             <mark>I don't really know what this does yet. Investigate.</mark>
             <p><bdi>This text is in reverse!</bdi> This one's allright though.</p>
           </section>
-          <aside></aside>
+          <aside>
+            <video>
+              <source src="letsremaincalm.mp4">
+                <track
+                kind="subtitles"
+                label="English Subtitles"
+                src="subs.vtt"
+                srclang="en">
+            </video>
+          </aside>
         </article>
         <article>
           <section><output>This is an output.</output></section>
-          <section><p>This dog again. It's displayed using the embed element. It's not really used anymore.<embed src="thisdogagain.png"</section>
-          <aside></aside>
+          <section><p>This dog again. It's displayed using the embed element. It's meant to embed external plugins but web dev currently focuses on more native APIs, so it's not really used anymore.<embed src="thisdogagain.png"</section>
+          <aside>
+            <meter
+            min="0"
+            max="100"
+            value="70">
+              70 out of 100
+            </meter>
+            <progress
+            max="100"
+            value="60">
+          </progress>
+          </aside>
         </article>
       </main>
     <footer><nav></nav></footer>
