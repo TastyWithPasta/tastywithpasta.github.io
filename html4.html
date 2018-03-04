@@ -118,7 +118,6 @@
         <h2>LISTS</h2>
             <div id="listsExamplesContainer">
                 <hr/>
-
                 <h3>Unordered Lists</h3>
                 <ul>
                     <li>Unordered item 1</li>
@@ -130,9 +129,7 @@
                     </li>
                     <li>Unordered item 3</li>
                 </ul>
-
                 <hr/>
-
                 <h3>Ordered Lists</h3>
                 <ol>
                     <li>Ordered item 1</li>
@@ -144,9 +141,7 @@
                     </li>
                     <li>Ordered item 3</li>
                 </ol>
-                
                 <hr/>
-
                 <h3>Definition Lists</h3>
                 <dl>
                     <dt>Term 1</dt>
@@ -156,9 +151,7 @@
                     <dt>Term 3</dt>
                     <dd>Definition of term 3.</dd>
                 </dl>
-
                 <hr/>
-
                 <h3>List Rendering</h3>
                 <p>Deprecated method using "type=square" in html:
                     <ul type="square">
@@ -184,9 +177,7 @@
                         <li>Unordered item 3</li>
                     </ul>
                 </p>
-
                 <hr/>
-
                 <h3>List Re-ordering</h3>
                 <p>Deprecated for html4, but back in HTML 5. Use the "start" and "value" attributes to change the way list items are ordered.</p>
                 <ol>
@@ -199,7 +190,6 @@
                     </li>
                     <li value="99">Ordered item 3</li>
                 </ol>
-
             </div>
             
             <h2>ANCHORS AND LINKS</h2>
@@ -211,7 +201,179 @@
                 <hr/>
                 <h3>Named anchors to link within documents</h3>
                 <p>Here's an <a href="#textSection">anchor</a> to the text section in this document.<br/>
-                Here's an <a="www.tastywithpasta.github.io/content/dud.html#dudAnchor">anchor</a> in another document, the dud.</p>
+                Here's an <a href=".\content\dud.html">anchor</a> in another document, the dud. <br/>
+                Heres a <a href="#listsExamplesContainer">link</a> to an ID in the document (works the same as named anchors).</p>
+                <hr/>
+                <h3>Additional informations for links</h3>
+                <p>Not often used in practice: Language, Relationship, Content type, AccessKey.</p>
+            </div>
+
+            <h2>TABLES</h2>
+            <div class="tablesExamplesContainer">
+                <hr/>
+                <h3>Simple Table</h3>
+                <p>A table is composed of a caption (title), header, body and footer. </p>
+                <table border="1" summary="This table is a sample table.">
+                    <caption>My Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cell 1</td>
+                            <td>Cell 2</td>
+                        </tr>
+                        <tr>
+                            <td>Cell 3</td>
+                            <td>Cell 4</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td>This is the footer, only one &lt;td&gt;</td>
+                        </tr>
+                    </tfoot>
+                    <thead></thead>
+                    <tfoot></tfoot>
+                </table>
+                <hr/>
+                <h3>Colspan / Rowspan</h3>
+                <p>This is like fusing cells in excel. Much better for formatting.</p>
+                <table border="1" summary="This table is a sample table.">
+                    <caption>My Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cell 1</td>
+                            <td rowspan="2">Cells 2 and 4</td>
+                        </tr>
+                        <tr>
+                            <td>Cell 3</td>
+                            <!-- <td>Cell 4</td> -->
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">This is the footer, only one &lt;td&gt;</td>
+                        </tr>
+                    </tfoot>
+                    <thead></thead>
+                    <tfoot></tfoot>
+                </table>
+                <hr/>
+                <h3>Table Formatting</h3>
+                <p>You can control the width, the borders, the alignment (with css), the cell spacing or padding.<br/>
+                The width attribute can be specified in percentage (responsive) or pixels (non-responsive). Below is percentages.</p>
+                <table width="25%" border="1" summary="This table is a sample table.">
+                    <caption>My Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cell 1</td>
+                            <td rowspan="2">Cells 2 and 4</td>
+                        </tr>
+                        <tr>
+                            <td>Cell 3</td>
+                            <!-- <td>Cell 4</td> -->
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">This is the footer, only one &lt;td&gt;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <hr/>
+                <p>Below is 350px, center-aligned, with a large outer-border (look to your right).</p>
+                <table width="350em" align="center" border="5" summary="This table is a sample table.">
+                    <caption>My Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cell 1</td>
+                            <td rowspan="2">Cells 2 and 4</td>
+                        </tr>
+                        <tr>
+                            <td>Cell 3</td>
+                            <!-- <td>Cell 4</td> -->
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">This is the footer, only one &lt;td&gt;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <hr/>
+                <h4>Playing with frame and rules attributes.</h4>
+                <table width="25%" frame="border" rules="all" summary="This table is a sample table.">
+                    <caption>My Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cell 1</td>
+                            <td rowspan="2">Cells 2 and 4</td>
+                        </tr>
+                        <tr>
+                            <td>Cell 3</td>
+                            <!-- <td>Cell 4</td> -->
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">This is the footer, only one &lt;td&gt;</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <hr/>
+                <h4>Playing with padding:</h4>
+                <table width="25%" border="2" cellpadding="10px" cellspacing="10px" summary="This table is a sample table.">
+                    <caption>My Table Caption</caption>
+                    <thead>
+                        <tr>
+                            <th>Column 1</th>
+                            <th>Column 2</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Cell 1</td>
+                            <td rowspan="2">Cells 2 and 4</td>
+                        </tr>
+                        <tr>
+                            <td>Cell 3</td>
+                            <!-- <td>Cell 4</td> -->
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <td colspan="2">This is the footer, only one &lt;td&gt;</td>
+                        </tr>
+                    </tfoot>
+                </table>
             </div>
         </body>
 </html>
