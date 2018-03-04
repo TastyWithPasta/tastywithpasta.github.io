@@ -39,13 +39,8 @@
     
     <body>
         <h1>HTML 4 Reference page</h1>
-        <div id="overviewContainer">
-            <h2>Overview</h2>
-            <p>HTML drives the web. This is an overview paragraph.</p>
-            <h3>Objectives</h3>
-            <h3>Outline</h3>
-        </div>
-        <h2>TEXT</h2>
+
+        <a name="textSection" title="Test for a local target anchor."> <h2>TEXT</h2> </a>
         <hr/>
             <div id="textExamplesContainer">
                 <h3>Whitespace</h3>
@@ -207,19 +202,16 @@
 
             </div>
             
-            <h2>Links and Anchors</h2>
+            <h2>ANCHORS AND LINKS</h2>
             <div class="linksAndAnchorsContainer">
-                <hr/>
-                <h3>Anchors</h3>
-                <p>Anchors with the "name" attribute are named anchors, linking inside the document. <br/>
-                    Anchors with href attributes are sources.</p>
-                <p>Absolute link: "href=http://something.com/file1.htm" <br/>
-                Relative link: "href=.\content\file2.htm"
-                </p>
                 <hr/>
                 <h3>Linking Documents</h3>
                 <p>Here's a <a href=".\content\dud.html">relative link</a> to the dud.<br/>
-                Here's an <a="www.tastywithpasta.github.io/content/dud.html">absolute link</a> to the dud.</p>
+                Here's an <a href="www.tastywithpasta.github.io/content/dud.html">absolute link</a> to the dud.</p>
+                <hr/>
+                <h3>Named anchors to link within documents</h3>
+                <p>Here's an <a href="#textSection">anchor</a> to the text section in this document.<br/>
+                Here's an <a="www.tastywithpasta.github.io/content/dud.html#dudAnchor">anchor</a> in another document, the dud.</p>
             </div>
         </body>
 </html>
