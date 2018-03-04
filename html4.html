@@ -380,7 +380,14 @@
             <div id="imagesAndObjectsExamplesContainer">
                 <hr/>
                 <h3>Images</h3>
-                <img src="thisdog.png" alt="Nice Dog" width="100" height="100"/>
+                <p>
+                    Internal reference:<br/>
+                    <img src="thisdog.png" title="This dog" alt="Nice Dog" width="100" height="100"/>
+                </p>
+                <p>
+                    External (url) reference:<br/>
+                    <img src="http://www.dogster.com/wp-content/uploads/2015/11/SneakersSocialDog.png" alt="Link is broken. Should be a dog with its head through a piece of toast." width="100" height="100"/>
+                </p>
                 <hr/>
                 <h3>Objects</h3>
                 <p>Objects are initialized in their own tag, and parameters can be passed using param between the object tags. Anaything after params is a fallback. <br/>
