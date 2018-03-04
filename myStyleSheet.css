@@ -14,10 +14,35 @@ p {
     background-color: darkred;
 }
 
+/* Selectors based on IDs and classes */
 #id {
     background-color: greenyellow;
 }
 
 .class {
     background-color: darkgreen;
+}
+
+/* Descendant selector: will apply to any paragraphs inside a div no matter the hierarchy */
+div p {
+    color: red;
+}
+
+/* Child selector: will apply to any DIRECT child paragraphs of divs */
+div > p {
+    color: white;
+}
+
+/* Attribute selector */
+p[title] {
+    background-color: brown;
+}
+p[title="A title"]
+{
+    color: white;
+}
+
+/* Psudo-class selector */
+a:visited {
+    background-color: blueviolet;
 }
