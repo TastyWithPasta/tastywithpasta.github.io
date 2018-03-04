@@ -122,7 +122,89 @@
 
         <h2>LISTS</h2>
             <div id="listsExamplesContainer">
+                <hr/>
+
+                <h3>Unordered Lists</h3>
+                <ul>
+                    <li>Unordered item 1</li>
+                    <li>Unordered item 2
+                        <ul>
+                            <li>Sub-list item 1</li>
+                            <li>Sub-list item 2</li>
+                        </ul>
+                    </li>
+                    <li>Unordered item 3</li>
+                </ul>
+
+                <hr/>
+
+                <h3>Ordered Lists</h3>
+                <ol>
+                    <li>Ordered item 1</li>
+                    <li>Ordered item 2
+                        <ol>
+                            <li>Sub-list item 1</li>
+                            <li>Sub-list item 2</li>
+                        </ol>
+                    </li>
+                    <li>Ordered item 3</li>
+                </ol>
                 
+                <hr/>
+
+                <h3>Definition Lists</h3>
+                <dl>
+                    <dt>Term 1</dt>
+                    <dd>Definition of term 1.</dd>
+                    <dt>Term 2</dt>
+                    <dd>Definition of term 2.</dd>
+                    <dt>Term 3</dt>
+                    <dd>Definition of term 3.</dd>
+                </dl>
+
+                <hr/>
+
+                <h3>List Rendering</h3>
+                <p>Deprecated method using "type=square" in html:
+                    <ul type="square">
+                        <li>Unordered item 1</li>
+                        <li>Unordered item 2
+                            <ul>
+                                <li>Sub-list item 1</li>
+                                <li>Sub-list item 2</li>
+                            </ul>
+                        </li>
+                        <li>Unordered item 3</li>
+                    </ul>
+                </p>
+                <p>Best practice using style sheets + classes (see html4.css). Look for list-style-type to find available styles:
+                    <ul class="squareList">
+                        <li>Unordered item 1</li>
+                        <li>Unordered item 2
+                            <ul class="discList">
+                                <li>Sub-list item 1</li>
+                                <li>Sub-list item 2</li>
+                            </ul>
+                        </li>
+                        <li>Unordered item 3</li>
+                    </ul>
+                </p>
+
+                <hr/>
+
+                <h3>List Re-ordering</h3>
+                <p>Deprecated for html4, but back in HTML 5. Use the "start" and "value" attributes to change the way list items are ordered.</p>
+                <ol>
+                    <li>Ordered item 1</li>
+                    <li>Ordered item 2
+                        <ol start="9">
+                            <li>Sub-list item 1</li>
+                            <li>Sub-list item 2</li>
+                        </ol>
+                    </li>
+                    <li value="99">Ordered item 3</li>
+                </ol>
+
             </div>
         </body>
 </html>
