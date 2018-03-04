@@ -1,0 +1,94 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xthml" lang="en-us">
+    
+    <head>
+        <title id="myID">Hello HTML</title>
+
+        <meta name="Author" content="Christophe Lionet" />
+        <meta name="Alias" content="TastyWithPasta"/>
+        <meta name="Description" content="My first little HTML4 test page"/>
+        <meta name="Keywords" lang="en-us" content="Pluralsight,Sample,TastyWithPasta,ShittyWebsite"/>
+        <meta http-equiv="content-type" content = "text/html;charset=utf-8" />
+
+        <script type="text/javascript">
+        window.onload = function() {
+            //alert("window loaded");
+            document.getElementbyID("myID").innerHTML = "hello Javascript";
+        };
+        </script>
+
+        <!-- Loading scripts from external files -->
+        <!-- <script src="" type="text/javascript"></script> -->
+        
+        <!-- Style from inside the page -->
+        <!--
+        <style type="text/css">
+            body {color:red}
+        </style>
+        -->
+
+        <!-- base provides the base address for all following relative links -->
+        <!--<base href="www.tastywithpasta/com" />-->
+
+        <!-- Style from outside the page using link and relative address -->
+        <link rel="stylesheet" type="text/css" href="html4.css"/>
+
+
+    </head>
+    
+    <body>
+        <h1>HTML Fundamentals</h1>
+        <div id="overviewContainer">
+            <h2>Overview</h2>
+            <p>HTML drivees the web. This is an overview paragraph.</p>
+            <h3>Objectives</h3>
+            <h3>Outline</h3>
+        </div>
+        <h2>Examples</h2>
+        <hr/>
+        <div id="examplesContainer">
+            <h3>Whitespace</h3>
+            <p>
+                This is a line.
+                This should be another line (I pressed return), but "p" ignores whitespace.
+                These       words       should       be      far       apart. But no.
+            </p>
+            <pre>
+                I'm using "pre" this time.
+                This should be another line (I pressed return), and "pre" handles whitespace.
+                These       words       should       be      far       apart. They do.
+            </pre>
+
+            <hr/>
+
+            <h3>Line breaks</h3>
+            <p>This is a single paragraph <br/>
+            with line breaks. <br/><br/> That was two breaks.
+            </p>
+
+            <hr/>
+
+            <h3>Escape Characters</h3>
+            <p>I am writing &lt;&gt; without it being interpreted. Here it's & + lt; and & + gt; <br/> Use & + different codes to display special characters that would normally be interpreted.</p>
+            
+            <hr/>
+
+            <h3>Non-Breaking Space</h3>
+            <p>This is a very long text. By shrinking the window horizontally, the text will automatically&nbsp;wrap around the edges. But if you don't want that to happen between two words, use & + nbsp;. Here, the words "automatically" and "wrap" are wrapped together.</p>
+            <h3>My misc</h3>
+            <div id="overviewContainer">This is an overview</span>.</div>
+            <div id="secondID">This is another div.</div>
+
+            <!-- p VS div -->
+            <p>This is a paragraph.</p>
+            <div>This is a div.</div>
+            <p>This is another paragraph.</p>
+
+            <hr/>
+
+            <!-- span -->
+            <p>This <span>paragraph</span> contains <span>spans</span>. They are inline.</p>
+        </div>
+    </body>
+</html>
