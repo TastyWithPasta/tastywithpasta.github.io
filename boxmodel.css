@@ -7,21 +7,31 @@
 
 body{
     background-color: grey;
+    align-content: center;
 }
 
-ul {
+
+.menu {
     list-style-type: none;
+    text-align: center;
 }
 
-ul li {
+.menu li:hover {
+    background-color: lightcoral;
+}
+
+.menu li {
+    /* width: 30% Apparently putting this here would size the box with its TOTAL DIMENSIONS, overriding the margins too. New spec of CSS? */
+    width:15%;
+    display: inline-block;
     background-color: darkgrey;
     padding: 3px 0 0 10px;
     margin: 10px 25px 10px 25px;
     border-bottom: 3px solid black;
-    border-left: 10px solid maroon;
 }
 
 /* Can select a specific item in a list */
-ul li:nth-child(3) {
+.menu li:nth-child(2) {
     background-color: rgb(34, 34, 34);
+    /*visibility: hidden;*/
 }
