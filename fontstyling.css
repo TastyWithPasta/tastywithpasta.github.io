@@ -1,0 +1,30 @@
+body{
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0 10% 0 10%;
+}
+
+#serif {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#sans-serif {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.code {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.75em;
+    background-color: lightgrey;
+    margin: 0 0 0 25px;
+    padding: 10px 0 10px 25px;
+}
+
+.content {
+    text-indent: 3em;
+    text-align: justify;
+    line-height: 1.2em;
+}
