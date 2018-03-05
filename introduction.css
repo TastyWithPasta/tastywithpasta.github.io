@@ -1,5 +1,6 @@
 body {
     background-color: blanchedalmond;
+    color:whitesmoke;
 }
 
 h1 {
@@ -7,11 +8,17 @@ h1 {
 }
 
 div {
+    width: 50%;
     background-color: red;
 }
 
 p {
+    width: 50%; /* Due to the inheritance, any p inside a div will be 50% of 50% (25% of the page) in width */
     background-color: darkred;
+    font-size: large;
+    border-style: dashed;
+    border-color: black;
+    border-width: 1px;
 }
 
 /* Selectors based on IDs and classes */
@@ -42,7 +49,7 @@ p[title="A title"]
     color: white;
 }
 
-/* Psudo-class selector */
+/* Pseudo-class selector */
 a:visited {
     background-color: blueviolet;
 }
