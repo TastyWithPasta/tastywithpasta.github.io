@@ -2,6 +2,28 @@
 /* Importing a style
 /* @import url("inheritance2.css"); */
 
+/* This will be overridden by inheritance2 that is imported afterwards in the html file. 
+That is unless it is imported above, then the rule will be applied last. */
 p {
-    color: red;
+    color: white;
 }
+
+/* Specificity = 0: a=0 b=0 c=0 */
+*
+{
+    background-color: yellow;
+}
+
+/* Specificity = 1: a=0 b=0 c=1 */
+div {
+    background-color: orange;
+}
+
+/* Specificity = 2: a=0 b=0 c=2 */
+body > div {
+    background-color: red;
+}
+body div {
+    background-color: red;
+}
+
