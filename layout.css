@@ -1,0 +1,21 @@
+.moverightrelative {
+    position: relative;
+    left: 100px;
+}
+
+.stickytoprightabsolute{
+    position: absolute;
+    top:10%;
+    left:90%;
+}
+
+/* Float allows to align elements on the page */
+#layoutImage{
+    float:left;
+    margin-right: 10px;
+}
+
+/* Clear removes alignment properties like float */
+.clear {
+    clear:both;
+}

@@ -2,8 +2,7 @@
 <html>
     <head>
         <title>Stylesheet Test Page</title>
-        <link rel="stylesheet" href="inheritance1.css" type="text/css" />
-        <link rel="stylesheet" href="inheritance2.css" type="text/css" />
+        <link rel="stylesheet" href="layout.css" type="text/css" />
     </head>
     <body>
         <h1>Header 1</h1>
@@ -11,16 +10,23 @@
         <div>A div</div>
         <p>A paragraph</p>
         <div>
-            <p>A paragraph inside a div.</p>
+            <p class="moverightrelative">A paragraph inside a div.</p>
         </div>
         <div>
             <form>
                 <p>A paragraph inside a form inside a div.</p>
             </form>
         </div>
-        <p class="class">A paragraph with a class.</p>
-        <p id="id">A paragraph with an id.</p>
-        <p title="A title">A paragraph with a title attribute.</p>
-        <a href="index.html">Refresh Link</a>
+        <img id="layoutImage" alt="Page Composition Diagram" src="page_layout.png"/ width="300px"/>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        <div class="clear">
+            <p class="class">A paragraph with a class.</p>
+            <p id="id">A paragraph with an id.</p>
+            <p title="A title">A paragraph with a title attribute.</p>
+            <a href="index.html" class="stickytoprightabsolute">Refresh Link</a>
+        </div>
     </body>
 </html>
