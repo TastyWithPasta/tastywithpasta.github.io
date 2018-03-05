@@ -1,0 +1,27 @@
+/* Much like a CSS reset, resets the default rules applied by the browser's default stylesheet*/
+*
+{
+    padding:0px;
+    margin:0px;
+}
+
+body{
+    background-color: grey;
+}
+
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    background-color: darkgrey;
+    padding: 3px 0 0 10px;
+    margin: 10px 25px 10px 25px;
+    border-bottom: 3px solid black;
+    border-left: 10px solid maroon;
+}
+
+/* Can select a specific item in a list */
+ul li:nth-child(3) {
+    background-color: rgb(34, 34, 34);
+}
