@@ -6,13 +6,24 @@
 let suits = [ "Hearts", "Clubs", "Diamonds", "Spades" ]
 let values = [ "Ace", "King", "Queen", "Jack", "Ten", "Nine", 
 "Eight", "Seven", "Six", "Five", "Four", "Three", "Two"]
-let deck = [ ];
 
-for(let i=0; i<suits.length; i++){
-    for(let j=0; j<values.length; j++) {
-        deck.push(values[j] + " of " + suits[i]);
+
+function createDeck(){
+    deck = [];
+    for(let i=0; i<suits.length; i++){
+        for(let j=0; j<values.length; j++) {
+            deck.push(values[j] + " of " + suits[i]);
+        }
     }
+    return deck;
 }
+
+let deck = createDeck();
+
+function getNextCard(){
+    return deck.shift();
+}
+
 
 
 let playerCards = [ deck[0], deck [2] ];
