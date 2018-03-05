@@ -9,21 +9,24 @@ p {
 }
 
 /* Specificity = 0: a=0 b=0 c=0 */
+/* Weirdly, with this, even backgrounds of high priority items appear yellow.
+This means it's applied last? To investigate. In the meantime, commented out. */
+/*
 *
 {
     background-color: yellow;
 }
+*/
 
 /* Specificity = 1: a=0 b=0 c=1 */
 div {
     background-color: orange;
+    font-size: 150%;
 }
 
 /* Specificity = 2: a=0 b=0 c=2 */
 body > div {
     background-color: red;
 }
-body div {
-    background-color: red;
-}
+
 
