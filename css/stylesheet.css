@@ -1,0 +1,12 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+input:valid {
+    border: 2px;
+    border-color: green;
+}
+
+.invalid {
+    color: #999;
+  }
