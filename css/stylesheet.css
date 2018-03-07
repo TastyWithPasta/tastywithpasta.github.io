@@ -1,10 +1,66 @@
-body {
-    margin: 0px;
-    padding: 0px;
+*
+{
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
 }
-input:valid {
-    border: 2px;
+
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+body {
+    background-color: grey;
+    color: whitesmoke;
+}
+
+.hide {
+    display: none;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+.navbar li {
+    display: inline-block;
+}
+.navbar a:hover {
+    font-weight: bold; 
+}
+.nav-link {
+    margin: 20px 0 0 35px;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2em;
+}
+
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: #c33;
+  border-color: #c33;
+}
+
+input:focus:invalid:focus,
+textarea:focus:invalid:focus,
+select:focus:invalid:focus {
+  border-color: #c33;
+  -webkit-box-shadow: 0 0 6px #fcc;
+     -moz-box-shadow: 0 0 6px #fcc;
+          box-shadow: 0 0 6px #fcc;
+}
+
+input:focus:valid,
+textarea:focus:valid,
+select:focus:valid {
+    color: green;
     border-color: green;
+}
+
+input:invalid,
+textarea:invalid,
+select:invalid {
+  border-bottom: 1px solid #c33;
 }
 
 .invalid {
