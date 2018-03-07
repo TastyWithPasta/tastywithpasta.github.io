@@ -12,6 +12,14 @@ a{
 body {
     background-color: grey;
     color: whitesmoke;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+article {
+    background-color: darkgray;
+    margin: 25px 0 25px 0;
+    padding: 20px 30px 20px 30px;
 }
 
 article p {
