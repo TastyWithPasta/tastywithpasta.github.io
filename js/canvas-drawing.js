@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function(e) {
         return;
     }
     
-    var canvas = document.getElementById('canvas');
+    var canvas = document.getElementById('canvas-drawing');
     var context = canvas.getContext('2d');
 
-    // Draw Triangle
+    ////////////////////////////// Simple Triangle \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     var trianglePos = {
         x: 25,
         y: 50
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     context.lineTo(trianglePos.x, trianglePos.y + 50);
     context.fill();
 
-    // Draw Styled Shapamajig
+    ////////////////////////////// Complex Styled Shape \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     var rectanglePos = {
         x: 100,
         y: 100
@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
     context.stroke();
 
 
-    // Fill Rectangles
+    ////////////////////////////// Filled Rectangles \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
     var fillRectPos = {
         x: 250,
         y: 50
@@ -51,4 +51,50 @@ document.addEventListener('DOMContentLoaded', function(e) {
     context.strokeStyle = 'rgb(51,153,0)'                               // Draw outlines around the cleared rectangle
     context.lineWidth = 6;
     context.strokeRect(fillRectPos.x + 65, fillRectPos.y + 65, 20, 20);
+
+
+    ////////////////////////////// Gradients n' shit \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    var g1 = context.createRadialGradient(
+        460, // X coordinate of grad. start
+        120, // Y coordinate of grad. start
+        0,   // Radius of the start circle
+        720, // X coordinate of grad. end
+        220, // Y coordinate of grad. end
+        300);// Radius of the end circle
+    g1.addColorStop(0, '#ffffff');
+    g1.addColorStop(1, '#999999');
+  
+    // base circle
+    context.lineWidth = 0;
+    context.strokeStyle = '#000000';
+    context.fillStyle = g1;
+    context.beginPath();
+    context.arc(
+        580,        // X coordinate of arc start
+        180,        // Y coordinate of arc start
+        160,        // Radius
+        0,          // Start angle
+        Math.PI * 2,// End angle
+        true);      // Anticlockwise
+  
+    context.fill();
+  
+    var g2 = context.createRadialGradient(760, 320, 0, 660, 220, 200);
+    g2.addColorStop(0, '#ffffff');
+    g2.addColorStop(1, '#999999');
+  
+    // inner circle
+    context.fillStyle = g2;
+    context.beginPath();
+    context.arc(580,
+                180,
+                130,
+                0,
+                Math.PI * 2,
+                true);
+    context.fill();
+  
+    context.fillStyle = '#ffffff';
+    context.font = '280px Arial';
+    context.fillText('C', 480, 280);
 });
