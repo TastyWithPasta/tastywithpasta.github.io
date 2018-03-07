@@ -29,6 +29,8 @@ article p {
 canvas {
     border-color: white;
     border-style: dashed;
+    margin-left: 0px;
+    margin-right: 0px;
 }
 
 .hide {
