@@ -49,18 +49,14 @@ document.addEventListener('DOMContentLoaded', function(e) {
     var captureCanvas = document.getElementById("screenCapCanvas");
     var captureCanvasContext = captureCanvas.getContext('2d');
     
-    captureCanvas.width = video.width;
-    captyreCanvas.height = video.height;
-    captureCanvasContext.scale(0.25, 0.25);
+    captureCanvas.width = video.offsetWidth;
+    captureCanvas.height = video.offsetHeight;
     
     captureButton.addEventListener("click", function() {
-        captureCanvasContext.drawImage(video, 0, 0);
-        var captureIcon = captureCanvas.toDataURL("image/png");
-        var img = new Image();
-        img.onload = function() {
-            var screenCapsArea = document.getElementById("screenCapsArea");
-            screenCapsArea.appendChild(img);
-        };
-        img.src = captureIcon;
+        captureCanvasContext.drawImage(video, 0, 0, captureCanvas.width, captureCanvas.height);
+        var thumb = new Image();
+        thumb.src = captureCanvas.toDataURL("image/png");
+        screenCapsArea.appendChild(img);
+        i
     });
 });
