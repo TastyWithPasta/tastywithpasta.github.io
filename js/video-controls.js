@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
 
     var forEach = Array.prototype.forEach;
     var video = document.getElementById("video");
+    var audio = document.getElementById("audio");
     var stopButton = document.getElementById("stopButton");
     var muteButton = document.getElementById("muteButton");
     var firstFileName = video.getAttribute("data-firstfile");
@@ -37,6 +38,14 @@ document.addEventListener('DOMContentLoaded', function(e) {
             muteButton.innerText = "Unmute";
         }
         video.muted = !video.muted;
+    });
+
+    video.addEventListener("play", function() {
+        audio.pause();
+    });
+
+    audio.addEventListener("play", function() {
+        video.pause();
     });
 
     if(!Modernizr.canvas) {
