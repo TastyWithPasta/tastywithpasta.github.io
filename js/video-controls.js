@@ -42,9 +42,16 @@ document.addEventListener('DOMContentLoaded', function(e) {
     if(!Modernizr.canvas) {
         return;
     }
+
+    ////////////////////////////// Screencap \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+    var captureButton = document.getElementById("captureButton");
     var captureCanvas = document.getElementById("screenCapCanvas");
     var captureCanvasContext = captureCanvas.getContext('2d');
-    var captureButton = document.getElementById("captureButton");
+    
+    captureCanvas.width = video.width;
+    captyreCanvas.height = video.height;
+    captureCanvasContext.scale(0.25, 0.25);
     
     captureButton.addEventListener("click", function() {
         captureCanvasContext.drawImage(video, 0, 0);
