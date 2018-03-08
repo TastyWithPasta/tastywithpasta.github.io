@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function(e) {
         video.pause();
         video.currentTime = 0;
     });
+
     muteButton.addEventListener("click", function() {
         if(video.muted) {
             video.volume = previousVolume;
@@ -36,5 +37,23 @@ document.addEventListener('DOMContentLoaded', function(e) {
             muteButton.innerText = "Unmute";
         }
         video.muted = !video.muted;
+    });
+
+    if(!Modernizr.canvas) {
+        return;
+    }
+    var captureCanvas = document.getElementById("screenCapCanvas");
+    var captureCanvasContext = captureCanvas.getContext('2d');
+    var captureButton = document.getElementById("captureButton");
+    
+    captureButton.addEventListener("click", function() {
+        captureCanvasContext.drawImage(video, 0, 0);
+        var captureIcon = captureCanvas.toDataURL("image/png");
+        var img = new Image();
+        img.onload = function() {
+            var screenCapsArea = document.getElementById("screenCapsArea");
+            screenCapsArea.appendChild(img);
+        };
+        img.src = captureIcon;
     });
 });

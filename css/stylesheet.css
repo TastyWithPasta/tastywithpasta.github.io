@@ -13,7 +13,7 @@ body {
     background-color: grey;
     color: whitesmoke;
     margin-left: 5%;
-    margin-right: 5%;
+    margin-right: 25px;
 }
 
 article {
@@ -26,11 +26,9 @@ article p {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-canvas {
+#canvas-example canvas {
     border-color: white;
     border-style: dashed;
-    margin-left: 0px;
-    margin-right: 0px;
 }
 
 .hide {
