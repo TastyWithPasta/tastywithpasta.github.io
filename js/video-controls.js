@@ -57,6 +57,5 @@ document.addEventListener('DOMContentLoaded', function(e) {
         var thumb = new Image();
         thumb.src = captureCanvas.toDataURL("image/png");
         screenCapsArea.appendChild(img);
-        i
     });
 });
