@@ -9,6 +9,7 @@
         <script src="js/data-validation.js" type="text/javascript"></script>
         <script src="js/canvas-drawing.js" type="text/javascript"></script>
         <script src="js/canvas-animating.js" type="text/javascript"></script>
+        <script src="js/dragdrop.js" type="text/javascript"></script>
     </head>
 
     <body>
@@ -53,6 +54,7 @@
                 </form>
             </article>
             <article id="video-example">
+                <p>Interactive Video Example:</p>
                 <video id="video" controls preload="auto"  poster="media/puppy.jpg" width="400"
                 data-firstfile="letsremaincalm"
                 data-secondfile="ripefordisaster">
@@ -68,6 +70,7 @@
                 <button id='muteButton'>Mute</button>
                 <button id='captureButton'>Capture</button>
                 <br/><br/>
+                <p>Interactive Audio Example FEATURING TEYOLIA:</p>
                 <audio id="audio" controls loop>
                     <source src="media/teyolia.mp3">
                     <source src="media/teyolia.ogg">
@@ -82,6 +85,61 @@
                 <br/>
                 <p>Canvas Transform/Animation Examples:</p>
                 <canvas id="canvas-animating" width="800" height="400"></canvas>
+            </article>
+            <article id='dragdrop-example'>
+                <p>Drag & Drop Examples FEATURING GARY SPACE:</p>
+                <div id='source-container' data-role="drag-drop-target">
+                    <img id='garyImage' src="media/garyspace.png" alt="Gary Space" draggable=true>
+                </div>
+                <div id='target-container' data-role="drag-drop-target"></div>
+                    <p id='dragEffectMsg' class="hide"></p>
+                <br/><br/>
+
+                <div id="effectAllowedRadios">
+                    <p>Source: EffectAllowed</p>
+                    
+                    <input id="copy-allowed" type="radio" name="allowed" checked="true" value="copy" /> 
+                    <label for="copy-allowed">copy</label>
+            
+                    <input id="move-allowed" type="radio" name="allowed" value="move" />
+                    <label for="move-allowed">move</label>
+            
+                    <input id="link-allowed" type="radio" name="allowed" value="link" />
+                    <label for="link-allowed">link</label>
+            
+                    <input id="none-allowed" type="radio" name="allowed" value="none" />
+                    <label for="none-allowed">none</label>
+            
+                    <input id="copyLink-allowed" type="radio" name="allowed" value="copyLink" />
+                    <label for="copyLink-allowed">copyLink</label>
+            
+                    <input id="linkMove-allowed" type="radio" name="allowed" value="linkMove" />
+                    <label for="linkMove-allowed">linkMove</label>
+            
+                    <input id="all-allowed" type="radio" name="allowed" value="all" />
+                    <label for="all-allowed">all</label>
+            
+                    <input id="uninitialized-allowed" type="radio" name="allowed" value="uninitialized" />
+                    <label for="uninitialized-allowed">uninitialized</label>
+                </div>
+
+                <br/>
+
+                <div id="dropEffectsRadios">
+                    <p>Target: dropEffect</p>
+
+                    <input id="copy-effect" type="radio" name="effect" checked value="copy" /> 
+                    <label for="copy-effect">copy</label>
+
+                    <input id="move-effect" type="radio" name="effect" value="move" />
+                    <label for="move-effect">move</label>
+
+                    <input id="link-effect" type="radio" name="effect" value="link" />
+                    <label for="link-effect">link</label>
+
+                    <input id="none-effect" type="radio" name="effect" value="none" />
+                    <label for="none-effect">none</label>
+                </div>
             </article>
         </main>
     </body>

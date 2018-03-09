@@ -37,8 +37,20 @@ article p {
     border-style: dashed;
 }
 
+#dragdrop-example [data-role=drag-drop-target] {
+    width: 150px;
+    height: 185px;
+    border-color: white;
+    border-style: dashed;
+    display:inline-block;
+}
+
 .hide {
     display: none;
+}
+
+.dragOver {
+    background-color: rgb(209, 209, 209);
 }
 
 .navbar ul {
