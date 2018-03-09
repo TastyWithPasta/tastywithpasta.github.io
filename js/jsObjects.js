@@ -1,11 +1,5 @@
 "use strict"; // Best practice
 
-function AddSeparator() {
-    var separator = document.createElement("hr");
-    separator.classList.add("separator");
-    document.body.appendChild(separator);
-};
-
 ///// Properties can be added on the fly \\\\\
 
 var cat = { name:"Avocato", color:"Black" };

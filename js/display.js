@@ -1,6 +1,12 @@
 // This script is made to add elements to the page easily and automagically,
 // in order to study js objects and prototypes more efficiently.
 
+function AddSeparator() {
+  var separator = document.createElement("hr");
+  separator.classList.add("separator");
+  document.body.appendChild(separator);
+};
+
 // Displays any object passed through in HTML
 // Arguments can be taken even if not explicitely defined ?! Wow
 function display() {
