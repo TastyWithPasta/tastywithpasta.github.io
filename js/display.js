@@ -8,7 +8,7 @@ function display() {
       if (typeof arguments[i] === 'object') 
         displayObject(arguments[i])
       else
-        displayValue(arguments[i], true)
+        displayValue(arguments[i], false)
     }
   }
   
@@ -22,14 +22,16 @@ function display() {
         displayValue(propertyName + ': ' + object[propertyName], false, true);
       }
     }
-    displayValue('}', true)
+    displayValue('}', false)
   }
   
 
   // Creates a div, formats it and adds it to the body of the page.
   function displayValue(value, addMargin, addPadding) {
     var div = document.createElement('div');
-    div.style.fontSize='32px'
+    div.style.fontSize='12px'
+    div.style.padding = 0;
+    div.style.margin = 0;
     if (addMargin)
       div.style.marginBottom='30px'
     if (addPadding)
