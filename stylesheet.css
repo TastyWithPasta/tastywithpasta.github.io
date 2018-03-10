@@ -1,0 +1,7 @@
+body {
+    background-color: bisque;
+}
+
+#video {
+    visibility: hidden;
+}
