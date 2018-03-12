@@ -38,10 +38,56 @@ function SelectorsDemo() {
 }
 
 function DomAlterationDemo() {
-     // Replaces content of the first 3 li elements
-     // Function can be called alone or with just index, as element is $(this).
-     $('li').each(function(index, element) {
-        if(index < 3)
-            $(element).html('List Item ' + (index+1) + ' (Changed by iterating with each, and selecting indices below 3)');
+
+     // Replaces content of the first 3 li elements or changes their title.
+     $('li').each(function(index, element) { // Function can be called without element, or without arguments
+        if(index < 3) {
+            // $(this) is the same as using $(element)
+            $(this).html('List Item ' + (index+1) + ' (Changed by iterating with each, and selecting indices below 3)');
+            
+            $(this).attr('title', 'ListBefore3'); // 
+            $(this).attr({
+                style: 'border: 2px solid white',
+                role: 'nah'
+            }); //Done using a JSON object
+        } 
+        else {
+            this.title="ListAfter3"; // this refers to the raw DOM object
+        }
     });
+
+    //Example of chaining
+    $('body > div').attr({
+        title: 'Main Body div'
+    }).css({
+        'background-color': 'blue'  //CSS can be passed as JSON but need to be quoted.
+    })
+    .css('color', 'white');
+
+    //Append (add on bottom) elements to first div using append and appendTo
+    $('div:first-child').append('<span>This span has been appended to div 1 using append. </span>');
+    $('<span>This span has been appended to div 1 using appendTo</span>').appendTo('div:first-child');
+
+    //Prepend (add on top) elements to first div using append and appendTo
+    $('div:first-child').prepend('<span>This span has been appended to div 1 using prepend. </span>');
+    $('<span>This span has been appended to div 1 using prependTo. </span>').prependTo('div:first-child');
+
+    // Wraps div 2 into another div with class wrapper
+    $('div:nth-child(2)').wrap('<div class="wrapper"/>');
+    $('.wrapper').css('text-decoration', 'white wavy underline');
+
+    // Removes div 3
+    $('div:nth-child(3)').remove();
+
+    // Adds a class to table rows:
+    $('tr').addClass('important');
+
+    // Removes class from all odd table rows:
+    var selection = $('tr:odd');
+    if(selection.hasClass('important'))
+        selection.removeClass('important');
+
+    // Toggles the important class of the last table row
+    $('tr:last-child').toggleClass('important');
+    $('tr:last-child').toggleClass('important');
 }
