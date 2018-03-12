@@ -3,9 +3,25 @@
     <head>
         <meta name="author" content="no"/>
         <title>go away</title>
+
+        <!-- Load jQuery from CDN -->
+        <script
+            type="text/javascript"
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+
+        <!-- Fallback if CDN doesn't work -->
+        <script type="text/javascript">
+            window.jQuery || document.write("<script type='text/javascript' src='libs/jquery-3.3.1.min.js'><\/script>")
+        </script>
+
+        <script type = "text/javascript" src="js/main.js"></script>
+        
     </head>
     <body style="background:skyblue">
-        <iframe id="video" src="//www.youtube.com/embed/eKqkRsB5vwY?rel=0&autoplay=1&t=386" style="visibility:hidden"></iframe>
-        <p style="color:skyblue">j'ai fait un faux départ je ne veux pas continuer la course</p>
+            <div id="myContent">
+                JQuery test page.
+            </div>
     </body>
 </html>
