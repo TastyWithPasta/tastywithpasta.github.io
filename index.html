@@ -20,8 +20,51 @@
         
     </head>
     <body style="background:skyblue">
-            <div id="myContent">
-                JQuery test page.
+            <div id="idToSelect">
+                <p>Div 1.</p>
             </div>
+            <div class="classToSelect">
+                <p>Div 2.</p>
+            </div>
+            <div>
+                <p>Div 3.</p>
+            </div>
+            <div>
+                <ul title="A List">
+                    <li>List Item 1</li>
+                    <li>List Item 2</li>
+                    <li>List Item 3</li>
+                    <li>List Item 4</li>
+                </ul>
+            </div>
+            <form id="form1">
+                <table style="width:300px;">
+                    <tr>
+                        <td style="width:30%;">First Name</td>
+                        <td style="width:70%;"><input id="FirstNameTextBox" placeholder="Chris" type="text" /></td>
+                    </tr>
+                    <tr>
+                        <td>Last Name</td>
+                        <td><input id="LastNameTextBox" type="text" value="Lionet"/></td>
+                    </tr>
+                    <tr>
+                        <td>Comments</td>
+                        <td><textarea rows="5" cols="60" id="CommentsTextBox" placeholder="Any comments?"></textarea></td>
+                    </tr>           
+                    <tr>
+                        <td>
+                        <select id="sel">
+                            <option value="AZ">AZ</option>
+                            <option value="CA" selected="true">CA</option>
+                        </select></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td><input id="SubmitButton" type="button" value="Submit" /></td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </table>  
+        
+            </form>
     </body>
 </html>
