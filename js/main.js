@@ -9,7 +9,8 @@ $(document).ready(function(){
     //SelectorsDemo();
     //DomAlterationDemo();
     //EventsDemo_ShortcutFunctions();
-    EventsDemo_OnFunction();
+    //EventsDemo_OnFunction();
+    AjaxDemo();
 });
 
 /// GO TO http://codylindley.com/jqueryselectors/ FOR PRACTICE! \\\
@@ -165,4 +166,31 @@ function EventsDemo_OnFunction(){
     // !!! The live function (deprecated) handles events from the document.
     // If an event is detected, it bubbles up to the document which handles it.
     // Which means only ONE handler, and not one per matching element.
+}
+
+
+// Load, Get, GetJSON, Post
+function AjaxDemo() {
+
+    // Load loads HTML DOM elements directly
+    $('#LoadButton').click(function() {
+        $('#RemoteOutput').load('distantPage_load.html #jQueryDom', function(response, status, xhr) {
+            if(status === 'error') {
+                alert('Error: ' + xhr.statusText);
+            }
+        });
+    });
+
+    $('#GetButton').click(function() {
+        $.get('distantPage_get.html', function(data) {
+            console.log("Retrieving data from distantPage_get.html");
+            $('#RemoteOutput').html(data);
+        });
+    });
+    $('#GetJSONButton').click(function() {
+        $.getJSON('distantPage_getJSON.html', function(data) {
+            console.log("Retrieving data from distantPage_getJSON.html");
+            $('#RemoteOutput').html(data);
+        });
+    });
 }
