@@ -1,0 +1,17 @@
+.important {
+    font-size: 20pt;
+    color: red;
+    background-color: pink;
+}
+
+.highlight{
+    background-color: rgba(0, 0, 0, 0.1)
+}
+
+.select{
+    text-decoration: underline;
+}
+
+.yellow {
+    color:yellow;
+}

@@ -7,7 +7,9 @@ window.onload = function(){
 $(document).ready(function(){
     console.log("DOM has loaded.");
     //SelectorsDemo();
-    DomAlterationDemo();
+    //DomAlterationDemo();
+    //EventsDemo_ShortcutFunctions();
+    EventsDemo_OnFunction();
 });
 
 /// GO TO http://codylindley.com/jqueryselectors/ FOR PRACTICE! \\\
@@ -90,4 +92,77 @@ function DomAlterationDemo() {
     // Toggles the important class of the last table row
     $('tr:last-child').toggleClass('important');
     $('tr:last-child').toggleClass('important');
+}
+
+
+function EventsDemo_ShortcutFunctions() {
+    // Double clicking a div element makes it yellow
+    $('div').dblclick(function() {
+        $(this).toggleClass('yellow');
+    });
+
+    // Chaining shortcut functions
+    $('div').mouseenter(function() {
+        $(this).toggleClass('highlight');
+    })
+    .mouseleave(function() {
+        $(this).toggleClass('highlight');
+    })
+    .mouseup(function(e){
+        $(this).text('X :' + e.pageX + ' Y: ' + e.pageY);
+    });
+
+    // Better than mouseenter and mouseleave.
+    // Can specify two arguments for enter and leave
+    $('div').hover(function() {
+        $(this).toggleClass('yellow');
+    });
+
+     // Clicking the submit button shows first and last name
+     $('#SubmitButton').click(function() {
+        var firstName = $('#FirstNameTextBox').val();
+        var lastName = $('#LastNameTextBox').val();
+        $('#NameOutput').text(firstName + ' ' + lastName);
+    });
+
+    // Detecting Changes
+    $('#CommentsTextBox').change(function(){
+        console.log("change!");
+        var outputText = $('#CommentsTextBox').val();
+        $('#CommentsOutput').text("Comments" + outputText);
+    });
+}
+
+//// OPTION 2: Using the 'on' function (same thing as above, but better since handling two events at once) \\\\
+function EventsDemo_OnFunction(){
+
+    // Same effect as the chaining in EventsDemo_ShortcutFunctions, but much more efficient to write
+    // In this case, 1 div = 1 event handler
+    $('div').on('mouseenter mouseleave mouseup', function(e) {
+        $(this).toggleClass('highlight');
+        if(e.type === 'mouseup') {
+            //$(this).text('X :' + e.pageX + ' Y: ' + e.pageY);
+        }
+    });
+
+    // Also can be done with a "map", a JSON formatted object
+    // In this case, 1 div = 1 event handler
+    $('div').on({
+        mouseenter: function() {
+            $(this).toggleClass('yellow');
+        },
+        mouseleave: function() {
+            $(this).toggleClass('yellow');
+        }
+    });
+
+    // Call event handler on the closest body parent element when a child p is double-clicked.
+    // Only ONE event handler mapped to body.
+    $( "body" ).on( "dblclick", "p", function() {
+        console.log("p element click event handler called!");
+    });
+
+    // !!! The live function (deprecated) handles events from the document.
+    // If an event is detected, it bubbles up to the document which handles it.
+    // Which means only ONE handler, and not one per matching element.
 }
