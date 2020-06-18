@@ -1,9 +1,10 @@
 <div>Hello this is article</div>
-<Route path="/create">
+<!-- <Route path="/create">
     <Create />
-</Route>
+</Route> -->
 
 <script>
+import { Router, Route } from "svelte-routing";
 // let ChatBox;
 
 // async function loadChatBox() {

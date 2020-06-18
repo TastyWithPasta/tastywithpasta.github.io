@@ -6,7 +6,7 @@
 	import Footer from './common/Footer.svelte';
 </script>
 
-<div class="container">
+<div class="container debug-border">
 	<Header/>
 	<Menu/>
 	<Article/>
